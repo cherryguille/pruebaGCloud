@@ -1,0 +1,29 @@
+<!---![](nh.png) ---->
+<img src="images/nh.png" width="130">
+<img src="images/tck.png" width="330">
+
+## Variable Booleana.
+
+```{r, echo=FALSE}
+knitr::kable(tabla_generalb)
+```
+
+
+#### Evolución 
+```{r fig.width=12, fig.height=6, echo=FALSE}
+gr_evol <- ggplot(evol_b_final,aes(x = dia,y = count_cookie))
+gr_evol +  geom_line(aes(group = b_cookie_state)) + facet_wrap(~annomes) + xlab("Día del mes") + ylab("Número de cookies") + ggtitle("Evolución tipo de cd booleano")
+```
+
+### Distribución de la variable booleana 
+
+```{r, echo=FALSE}
+knitr::kable(evol_b_total)
+```
+
+#### Preview de la variable
+
+```{r, echo=FALSE}
+knitr::kable(tabla_previewb)
+```
+

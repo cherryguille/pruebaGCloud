@@ -1,0 +1,30 @@
+<!---![](nh.png) ---->
+<img src="images/nh.png" width="130">
+<img src="images/tck.png" width="330">
+
+## Variable cuantitativa
+
+```{r, echo=FALSE}
+knitr::kable(var_table_q)
+```
+
+#### Evolución de la variable
+
+```{r fig.width=12, fig.height=6, echo=FALSE}
+gr_evol_q <- ggplot(tabla_evol_q,aes(x = dia, y = cd))
+  gr_evol_q + geom_hline(data=tabla_evol_q, aes(yintercept=cd_avg), colour="red",size=0.4) +  facet_wrap(~annomes) + geom_line(colour="#003A70",size=0.8) + facet_wrap(~annomes) + xlab("Día del mes") + ylab(variable_beauty) + ggtitle(paste("Evolución de",variable_beauty,"en función del mes",sep=" "))
+```
+
+#### Histograma de la variable
+
+```{r fig.width=12, fig.height=6, echo=FALSE}
+gr_evol_hist_q <- ggplot(tabla_hist_q,aes(x = cd))
+  gr_evol_hist + geom_area(colour="#003A70",fill="#003A70",aes(x=reorder(cd,-cuenta), y=cuenta),size=5) + xlab(paste("Valores de",variable_beauty,sep = " ")) + ylab(paste("Número de veces",variable_beauty,sep= " ")) + ggtitle(paste("Histograma de la variable",variable_beauty,sep= " ")) + scale_x_discrete(labels=abbreviate)
+  
+```
+
+#### Preview de la variable
+
+```{r fig.width=12, fig.height=6, echo=FALSE}
+kable(var_table_20_q, format = "markdown")
+```

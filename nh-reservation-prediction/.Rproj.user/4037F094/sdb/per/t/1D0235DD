@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "<!---![](nh.png) ---->\n<img src=\"nh.png\" width=\"130\">\n<img src=\"tck.png\" width=\"330\">\n\n# Entregable NH - Miércoles 1 de febrero de 2017\n\n## Variables Booleanas\n\n### Variable. Tipo de cookie\n```{r, echo=FALSE}\nknitr::kable(tabla_generalb)\n```\n\n\n#### Evolución de las cookies\n```{r fig.width=12, fig.height=6, echo=FALSE}\ngr_evol <- ggplot(evol_b_final,aes(x = dia,y = count_cookie))\ngr_evol +  geom_line(aes(group = b_cookie_state)) + facet_wrap(~annomes) + xlab(\"Día del mes\") + ylab(\"Número de cookies\") + ggtitle(\"Evolución tipo de cd booleano\")\n```\n\n###### A continuación se representan las cookies \n### Distribución de la variable booleana \n\n```{r, echo=FALSE}\nknitr::kable(evol_b_total)\n```\n\n#### Preview de la variable\n\n```{r, echo=FALSE}\nknitr::kable(tabla_previewb)\n```\n\n",
+    "created" : 1486462004179.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1053970759",
+    "id" : "1D0235DD",
+    "lastKnownWriteTime" : 1486463192,
+    "last_content_update" : 1486463192031,
+    "path" : "C:/Clientes/NH/Proyecto Modelo predictivo/Entregable HTML/entregableNH_bool.Rmd",
+    "project_path" : "entregableNH_bool.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
